@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MovieApi.Domain.Entities
+namespace MovieApi.Application.Features.CQRS.Commands.MovieCommands
 {
-    public class Movie
+    public class CreateMovieCommand
     {
-        public int MovieId { get; set; }
         public string Title { get; set; }
         public string CoverImageUrl { get; set; }
         public decimal Rating { get; set; }

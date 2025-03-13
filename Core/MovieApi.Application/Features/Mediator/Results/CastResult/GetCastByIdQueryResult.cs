@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MovieApi.Domain.Entities
+namespace MovieApi.Application.Features.Mediator.Results.CastResult
 {
-    public class Cast
+    public class GetCastByIdQueryResult
     {
         public int CastId { get; set; }
         public string Title { get; set; }

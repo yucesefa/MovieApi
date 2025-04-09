@@ -23,7 +23,7 @@ namespace MovieApi.Application.Features.Mediator.Handlers.CastHandlers
             var values = await _context.Casts.FindAsync(request.CastId);
             values.Name = request.Name;
             values.Surname = request.Surname;
-            values.ImageUrl = request.ImageUrl;
+            values.IamgeUrl = request.IamgeUrl;
             values.Biography = request.Biography;
             values.Title = request.Title;
             values.Overview = request.Overview;

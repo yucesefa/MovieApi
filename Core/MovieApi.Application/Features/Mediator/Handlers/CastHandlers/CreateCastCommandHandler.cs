@@ -26,7 +26,7 @@ namespace MovieApi.Application.Features.Mediator.Handlers.CastHandlers
                 Title = request.Title,
                 Name = request.Name,
                 Surname = request.Surname,
-                ImageUrl = request.ImageUrl,
+                IamgeUrl = request.IamgeUrl,
                 Overview = request.Overview,
                 Biography = request.Biography
             });

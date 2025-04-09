@@ -29,7 +29,7 @@ namespace MovieApi.Application.Features.Mediator.Handlers.CastHandlers
                 Title = values.Title,
                 Name = values.Name,
                 Surname = values.Surname,
-                ImageUrl = values.ImageUrl,
+                IamgeUrl = values.IamgeUrl,
                 Overview = values.Overview,
                 Biography = values.Biography
             };

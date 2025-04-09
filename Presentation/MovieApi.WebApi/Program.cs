@@ -1,7 +1,9 @@
 using Microsoft.OpenApi.Models;
 using MovieApi.Application.Features.CQRS.Handlers.CategoryHandlers;
 using MovieApi.Application.Features.CQRS.Handlers.MovieHandlers;
+using MovieApi.Application.Features.Mediator.Handlers.TagHandlers;
 using MovieApi.Persistence.Context;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,6 +23,10 @@ builder.Services.AddScoped<CreateMovieCommandHandler>();
 builder.Services.AddScoped<RemoveMovieCommandHandler>();
 builder.Services.AddScoped<UpdateMovieCommandHandler>();
 
+// hata verdi çünkü onion mimaride handlerin olduðu katmanýn assembly referansýna ihtiyaç duyar bu satýr bu yüzden çalýþmaz
+//builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly())); // IRequestHandler'leri implemente eden handlerlarý otomatik olarak bulur ve register eder.
+
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(GetTagQueryHandler).Assembly)); 
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
